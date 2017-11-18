@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
-//@class HotTub;
+#import "House_ObjC_main-Swift.h"
+@class HotTub;
 
 @interface House : NSObject 
 

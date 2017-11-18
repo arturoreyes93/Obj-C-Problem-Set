@@ -9,7 +9,7 @@
 import Cocoa
 
 
-enum Error: Int, ErrorType {
+enum Error: NSInteger, ErrorType {
     case Broken = 997
     case OutOfTune = 998
 }
