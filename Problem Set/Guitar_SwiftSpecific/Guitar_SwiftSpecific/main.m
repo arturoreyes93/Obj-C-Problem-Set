@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Guitarist.swift"
+#import "Note.swift"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {

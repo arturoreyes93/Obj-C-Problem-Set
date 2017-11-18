@@ -8,7 +8,7 @@
 
 import Cocoa
 
-struct Note {
+class Note: NSObject {
     
     let velocity: Float
 }

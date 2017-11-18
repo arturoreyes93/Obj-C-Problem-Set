@@ -9,12 +9,12 @@
 import Cocoa
 
 
-enum Error: ErrorType {
-    case Broken
-    case OutOfTune
+enum Error: Int, ErrorType {
+    case Broken = 997
+    case OutOfTune = 998
 }
 
-struct GuitarString {
+class GuitarString: NSObject {
     
     var broken: Bool = false
     var outOfTune: Bool = false

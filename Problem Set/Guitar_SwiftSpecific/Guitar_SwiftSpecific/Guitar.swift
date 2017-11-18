@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Guitar {
+class Guitar: NSObject {
     let frets: [Fret]
     let strings: [GuitarString]
     
@@ -28,7 +28,7 @@ class Guitar {
         try pluckString(&string, velocity: note.velocity)
     }
     
-    func pluckString(inout string: GuitarString, velocity: Float) throws {
+    func pluckString( string: inout GuitarString, velocity: Float) throws {
         // Pluck the note 
         try string.pluck(velocity)
     }
