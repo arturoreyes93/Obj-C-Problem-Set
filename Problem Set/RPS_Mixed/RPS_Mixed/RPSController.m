@@ -7,6 +7,7 @@
 //
 
 #import "RPSController.h"
+#import "RPSTurn.swift"
 
 @implementation RPSController
 
@@ -14,7 +15,7 @@
     _game = game;
 }
 
--(void)throwDown:(Move) playersMove {
+-(void)throwDown:(Move)playersMove {
     
     // Here the RPSTurn class generates the opponent's move
     RPSTurn *playersTurn = [[RPSTurn alloc]initWithMove:playersMove];

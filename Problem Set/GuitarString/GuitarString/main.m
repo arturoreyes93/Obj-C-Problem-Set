@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GuitarString.swift"
+#import "GuitarString-Bridging-Header.h"
 
 @class GuitarString;
 

@@ -7,6 +7,7 @@
 //
 
 #import "RPSGame.h"
+#import "RPSTurn.swift"
 
 @implementation RPSGame
 
