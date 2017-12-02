@@ -8,11 +8,11 @@
 
 import Cocoa
 
-class Note: NSObject {
+@objc class Note: NSObject {
     
     let velocity: Float
     
-    init(velocity: Float) {
+    @objc init(velocity: Float) {
         self.velocity = velocity
     }
 }

@@ -8,19 +8,19 @@
 
 import Cocoa
 
-class Guitarist: NSObject {
+@objc class Guitarist: NSObject {
     
-    let guitar:Guitar = Guitar(frets: [Fret()], strings: [GuitarString()])
+    let guitar: Guitar = Guitar(frets: [Fret()], strings: [GuitarString()])
     
-    func perform(notes: [Note]) {
+    @objc func perform(notes: [Note]) {
         for note in notes {
             do {
-                try guitar.playNote(note)
+                try guitar.playNote(note: note)
                 
-            } catch Error.Broken {
+            } catch myError.Broken {
                 print("Quick, replace the string!")
                 break
-            } catch Error.OutOfTune {
+            } catch myError.OutOfTune {
                 print("Uh oh! Tuning break.")
                 break
             } catch {

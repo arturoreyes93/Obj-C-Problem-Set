@@ -9,25 +9,25 @@
 import Cocoa
 
 
-enum Error: NSInteger, ErrorType {
+enum myError: NSInteger, Error {
     case Broken = 997
     case OutOfTune = 998
 }
 
-class GuitarString: NSObject {
+@objc class GuitarString: NSObject {
     
     var broken: Bool = false
     var outOfTune: Bool = false
     
-    mutating func pluck(velocity: Float) throws {
+    func pluck(velocity: Float) throws {
         if broken {
             // can't play a broken string
-            throw Error.Broken
+            throw myError.Broken
         }
         
         if outOfTune {
             // you can still play an out of tune string, this is just to illustrate another error type
-            throw Error.OutOfTune
+            throw myError.OutOfTune
         }
         
         // We're playing the string really hard.
@@ -40,7 +40,7 @@ class GuitarString: NSObject {
             if arc4random() % 2 == 1 {
                 // We broke the string! This sounds bad when it happens, so throw an error right away.
                 broken = true
-                throw Error.Broken
+                throw myError.Broken
             }
         }
         

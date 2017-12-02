@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "Guitarist.swift"
 #import "Note.swift"
+#import "Guitar_SwiftSpecific-Bridging-Header.h"
+#import "Guitar_SwiftSpecific-Swift.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
