@@ -15,9 +15,9 @@ let myDrill = Drill()
 myToolbox.tools = [myHammer, myDrill]
 
 let randomIndex = Int(arc4random_uniform(2))
-let tool = myToolbox.tools[randomIndex]
+let tool = myToolbox.tools[randomIndex] as AnyObject
 
-if let screw = tool.screw?() {
+if (tool.screw?()) != nil {
     print("is Drill")
 } else {
     print("tool is not a drill")
