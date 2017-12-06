@@ -5,12 +5,11 @@
 //  Created by Gabrielle Miller-Messner on 2/26/16.
 //  Copyright © 2016 Gabrielle Miller-Messner. All rights reserved.
 //
+#import "RPS_Mixed-Swift.h"
 
-#import <Foundation/Foundation.h>
-#import "RPSTurn.swift"
 @class RPSTurn;
 
-@interface RPSGame : NSObject
+@interface RPSGame : NSObject;
 
 @property (nonatomic) RPSTurn *firstTurn;
 @property (nonatomic) RPSTurn *secondTurn;

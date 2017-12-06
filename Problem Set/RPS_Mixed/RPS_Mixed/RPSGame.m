@@ -7,7 +7,7 @@
 //
 
 #import "RPSGame.h"
-#import "RPSTurn.swift"
+#import "RPS_Mixed-Swift.h"
 
 @implementation RPSGame
 
@@ -24,11 +24,11 @@
 }
 
 -(RPSTurn*)winner {
-    return [self.firstTurn defeats:self.secondTurn] ? self.firstTurn : self.secondTurn;
+    return [self.firstTurn defeatsWithOpponent:self.secondTurn] ? self.firstTurn : self.secondTurn;
 }
 
 -(RPSTurn*)loser {
-    return [self.firstTurn defeats:self.secondTurn] ? self.secondTurn : self.firstTurn;
+    return [self.firstTurn defeatsWithOpponent:self.secondTurn] ? self.secondTurn : self.firstTurn;
 }
 
 

@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "RPSGame.h"
+#import "RPS_Mixed-Swift.h"
 
 @interface RPSController : NSObject
 
 @property (nonatomic) RPSGame *game;
 
--(void)throwDown:(Move) playersMove;
+-(void)throwDown:(Move)playersMove;
 -(NSString*)messageForGame:(RPSGame*)game;
 @end
 
