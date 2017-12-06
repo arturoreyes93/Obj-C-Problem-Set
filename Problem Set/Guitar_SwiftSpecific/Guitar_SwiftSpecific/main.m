@@ -6,11 +6,9 @@
 //  Copyright © 2016 Gabrielle Miller-Messner. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "Guitarist.swift"
-#import "Note.swift"
-#import "Guitar_SwiftSpecific-Bridging-Header.h"
 #import "Guitar_SwiftSpecific-Swift.h"
+#import "Guitar_SwiftSpecific-Bridging-Header.h"
+#import <Foundation/Foundation.h>
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -18,7 +16,7 @@ int main(int argc, const char * argv[]) {
         Note *firstNote = [[Note alloc] initWithVelocity:0.9];
         Note *secondNote = [[Note alloc] initWithVelocity:0.7];
         NSArray *notes = @[firstNote, secondNote];
-        [jimiHendrix perform: notes];
+        [jimiHendrix performWithNotes: notes];
     }
     return 0;
 }

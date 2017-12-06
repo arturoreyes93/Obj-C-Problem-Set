@@ -8,13 +8,12 @@
 
 import Cocoa
 
-
-enum myError: NSInteger, Error {
+@objc enum myError: NSInteger, Error {
     case Broken = 997
     case OutOfTune = 998
 }
 
-@objc class GuitarString: NSObject {
+class GuitarString: NSObject {
     
     var broken: Bool = false
     var outOfTune: Bool = false

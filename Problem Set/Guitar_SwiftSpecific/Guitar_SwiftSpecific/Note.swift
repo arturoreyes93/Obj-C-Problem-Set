@@ -8,7 +8,7 @@
 
 import Cocoa
 
-@objc class Note: NSObject {
+class Note: NSObject {
     
     let velocity: Float
     
