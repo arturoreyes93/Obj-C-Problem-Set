@@ -8,18 +8,17 @@
 
 import Cocoa
 
-
-@objc enum GuitarStringError: NSInteger, ErrorType {
+@objc enum GuitarStringError: NSInteger, Error {
     case Broken = 876
     case OutOfTune = 543
 }
 
 class GuitarString: NSObject {
     
-    var broken: Bool = false
-    var outOfTune: Bool = false
+    @objc var broken: Bool = false
+    @objc var outOfTune: Bool = false
     
-    func pluck(velocity: Float) throws {
+    @objc func pluck(velocity: Float) throws {
         if broken {
             // can't play a broken string
             throw GuitarStringError.Broken
